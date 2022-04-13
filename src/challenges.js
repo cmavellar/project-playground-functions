@@ -2,7 +2,7 @@
 function compareTrue(x, y) {
   if (x === true && y === true) {
     return true;
-  }   
+  }
   return false;
 }
 // console.log(compareTrue(3,3));
@@ -15,18 +15,18 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let arrayDeStrings = string.split('');
+  let arrayDeStrings = string.split(' ');
   return arrayDeStrings;
 }
 // console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(arrayNomes) {
-  let concat = "";
-  concat = arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0];
+  let concat = '';
+  concat = (arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0]);
   return concat;
 }
-//  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
