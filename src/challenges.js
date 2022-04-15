@@ -120,11 +120,26 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(8, 10, 6));   
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumeros) {
+  let resultado = []; 
   
-
-  
+  for (let index = 0; index < arrayNumeros.length; index +=1) {
+    if (arrayNumeros[index] % 3 === 0 && arrayNumeros[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } 
+    else if (arrayNumeros[index] % 3 === 0 && arrayNumeros[index] % 5 !== 0) {
+      resultado.push('fizz');
+    }
+    else if (arrayNumeros[index] % 5 === 0 && arrayNumeros[index] % 3 !== 0) { 
+      resultado.push('buzz');
+    }  
+    else {
+      resultado.push('bug!'); 
+    }
+  } 
+  return resultado;
 }
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
