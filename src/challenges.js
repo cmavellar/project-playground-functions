@@ -14,8 +14,24 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  let arrayDeStrings = string.split(' ');
+function splitSentence(texto) {
+  // let arrayDeStrings = texto.split(' '); ---> Uma opção de resolução
+  // return arrayDeStrings;
+
+  let arrayDeStrings = [];
+  let palavra = '';
+  
+  for(index = 0; index < texto.length; index++) {
+    
+    if (texto[index] != ' ') {
+      palavra += texto[index];
+    }
+
+    if (texto[index] == ' ' || index == texto.length -1) {
+      arrayDeStrings.push(palavra);
+      palavra = '';
+    }
+  }
   return arrayDeStrings;
 }
 // console.log(splitSentence("go Trybe"));
@@ -26,7 +42,7 @@ function concatName(arrayNomes) {
   concat = (arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0]);
   return concat;
 }
- console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -37,11 +53,41 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(14,8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(valores) {
+  let maiorValor = valores[0];
+  let quantidadesVezes = 0;
+  for (index = 1; index < valores.length; index +=1) {
+    if (valores[index] > maiorValor) {
+      maiorValor = valores[index];
+    }
+  }
+  for (index = 0; index < valores.length; index+=1) {
+    if (valores[index] == maiorValor) {
+      quantidadesVezes ++ ;
+    }
+  }
+   return quantidadesVezes;
+}  
+  // console.log(highestCount([9, 1, 2, 3, 4, 9, 7])); 
 
-// Desafio 7
+//   function highestCount(valores) {   ---> Aqui testei outra forma de resolução. 
+//    let maiorValor = valores[0];  
+//    let quantidadesVezes = 1;
+//   for (index = 1; index < valores.length; index +=1) {   
+//     if (valores[index] == maiorValor) {
+//       quantidadesVezes ++ ; 
+//     }
+
+//     if (valores[index] > maiorValor) {
+//       maiorValor = valores[index];
+//       quantidadesVezes = 1;    
+//     }
+//   }  
+//   return quantidadesVezes;
+// }
+//   console.log(highestCount([9, 1, 2, 3, 4, 9, 7])); 
+
+ // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
