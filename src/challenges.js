@@ -192,15 +192,29 @@ function decode(texto) {
     }
     else {
       textoDecodificado += texto[index];
-    } 
-  } return textoDecodificado;
+    }
+  } 
+  return textoDecodificado;
 }   
-// } console.log(decode("h3 th2r2!"));
+// console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(listaTechs, name) { 
+  let novaLista = [];
+  listaTechs = listaTechs.sort();
+
+  if (listaTechs.length == 0) {
+    return 'Vazio!';
+  } 
+    for (let index = 0; index < listaTechs.length; index += 1) {
+      novaLista.push({
+      tech: listaTechs[index],
+      name: name
+      }); 
+  }
+  return novaLista;
+} 
+// console.log(techList(["React", "Jest", "HTML"], "Lucas")); 
 
 module.exports = {
   calcArea,
