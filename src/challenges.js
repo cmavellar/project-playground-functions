@@ -142,12 +142,60 @@ function fizzBuzz(arrayNumeros) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(texto) {
+  let textoCodificado = '';
+
+  for (let index = 0; index < texto.length; index +=1) {
+    if (texto[index] == 'a') {
+      // textoCodificado = textoCodificado + '1';
+      textoCodificado += '1';
+    }
+    else if (texto[index] == 'e') {
+      textoCodificado += '2';
+    }
+    else if (texto[index] == 'i') {
+      textoCodificado += '3';
+    }
+    else if (texto[index] == 'o') {
+      textoCodificado += '4';
+    }
+    else if (texto[index] == 'u') {
+      textoCodificado += '5';
+    }
+    else {
+      textoCodificado += texto[index];
+    }
+  }
+  return textoCodificado;
+} 
+// console.log(encode("hi there!")); 
+
+function decode(texto) {
+  let textoDecodificado = '';
+
+  for (let index = 0; index < texto.length; index +=1) {
+
+    if (texto[index] == '1') {
+      textoDecodificado += 'a';
+    }
+    else if (texto[index] == '2') {
+      textoDecodificado += 'e';
+    }
+    else if (texto[index] == '3') {
+      textoDecodificado += 'i';
+    }
+    else if (texto[index] == '4') {
+      textoDecodificado += 'o';
+    }
+    else if (texto[index] == '5') {
+      textoDecodificado += 'u';
+    }
+    else {
+      textoDecodificado += texto[index];
+    } 
+  } return textoDecodificado;
+}   
+// } console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
