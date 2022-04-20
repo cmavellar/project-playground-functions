@@ -211,7 +211,7 @@ function techList(listaTechs, name) {
       tech: listaTechs[index],
       name: name
       }); 
-  }
+  }  
   return novaLista;
 } 
 // console.log(techList(["React", "Jest", "HTML"], "Lucas")); 

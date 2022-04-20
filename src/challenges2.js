@@ -22,7 +22,7 @@ function generatePhoneNumber(arrayNumbers) {
   }          
   return resultado;
 }
-// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 7, 7, 2, 8, 9, 0]));
 
 
 // Desafio 12
@@ -37,9 +37,22 @@ function triangleCheck(a, b, c) {
 // console.log(triangleCheck(5, 10, 9));  
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(texto) {
+  let quantidadeBebidas = 0;
+
+  for (let index = 0; index < texto.length ; index +=1) {
+    if (isNaN(texto[index]) == false && texto[index] != " ") {  
+    quantidadeBebidas = quantidadeBebidas + parseInt(texto[index]);
+    }
+  } if (quantidadeBebidas == 1) {
+    return quantidadeBebidas + ' copo de água';
+  }
+  return quantidadeBebidas + ' copos de água';
+} 
+  
+ console.log(hydrate("1 cerveja"));
+ console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+ console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
