@@ -6,7 +6,10 @@ function generatePhoneNumber(arrayNumbers) {
   if (arrayNumbers.length != 11) {
     return 'Array com tamanho incorreto.';
   }
-  resultado = `(${arrayNumbers[0]}${arrayNumbers[1]})` + ` ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
+  resultado =
+   `(${arrayNumbers[0]}${arrayNumbers[1]})` +
+    ` ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}
+    -${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     for (let index1 = index + 1; index1 < arrayNumbers.length; index1 += 1) {
